@@ -1,28 +1,27 @@
 (function() {
     function config($stateProvider, $locationProvider) {
-        $locationProvider
-            .html5Mode({
-                enabled: true,
-                requireBase: false
-              });
+      $locationProvider
+        .html5Mode({
+          enabled: true,
+          requireBase: false
+        });
 
-    $stateProvider
+      $stateProvider
         .state('landing', {
             url: '/',
-            templateUrl: '../app/template/landing.html'
+            templateUrl: '/templates/landing.html'
           })
         .state('album', {
-          url: '/',
-          templateUrl: '../app/template/album.html'
+          url: '/album',
+          templateUrl: '/templates/album.html'
         })
         .state('collection', {
-          url: "/",
-          templateUrl: '../app/template/collection.html'
+          url: "/collection",
+          templateUrl: '/templates/collection.html'
         });
-    }
+      }
 
-angular.module('blocJams', ['ui.router']);
-    angular
-        .module('blocJams', ['ui.router'])
-        .config(config);
+  angular
+    .module('blocJams', ['ui.router'])
+    .config(config);
 })();
