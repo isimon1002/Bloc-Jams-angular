@@ -120,8 +120,8 @@
           currentSongIndex--;
 
           if (currentSongIndex < 0) {
-              currentBuzzObject.stop();
-              SongPlayer.currentSong.playing = null;
+            currentBuzzObject.stop();
+            SongPlayer.currentSong.playing = null;
             }
           else {
               var song = currentAlbum.songs[currentSongIndex];
@@ -137,7 +137,7 @@
       SongPlayer.next = function() {
           var currentSongIndex = getSongIndex(SongPlayer.currentSong);
           currentSongIndex++;
-          if (currentSongIndex > currentSongIndex.length) {
+          if (currentSongIndex >= currentAlbum.songs.length) {
               currentBuzzObject.stop();
               SongPlayer.currentSong.playing = null;
               }
