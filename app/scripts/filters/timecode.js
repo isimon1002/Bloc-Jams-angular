@@ -10,7 +10,7 @@
 
         var output = buzz.toTimer(time); //2:43
 
-      return output;
+        return output;
     };
 
   }
