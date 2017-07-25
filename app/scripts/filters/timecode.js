@@ -8,9 +8,7 @@
             return '-:--';
           }
 
-        var minutes = Math.floor(time / 60);  //2
-        var secondss = Math.round((((time / 60) - minutes) * 0.6)*100+1) //43
-        var output = minutes + ":" + secondss; //2:43
+        var output = buzz.toTimer(time); //2:43
 
       return output;
     };
